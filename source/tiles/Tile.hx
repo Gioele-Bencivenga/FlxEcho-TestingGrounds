@@ -12,11 +12,12 @@ class Tile extends FlxSprite {
 
 	public function new() {
 		super();
-
-		this.add_body({mass: 0});
 	}
 
 	public function init(_x:Float, _y:Float, _width:Int, _height:Int) {
+		width = _width;
+		height = _height;
+		this.add_body({mass: 0});
 		body = this.get_body();
 		body.x = _x;
 		body.y = _y;
